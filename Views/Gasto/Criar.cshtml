@@ -1,1 +1,29 @@
-<h1>Olá</h1>
+@model gestorDeGastosMVC.Models.Gasto
+@{
+    ViewData["Title"] = "Criar Gasto";
+}
+
+<h1>Criando Gasto</h1>
+<br>
+
+
+<form asp-action="Criar">
+    <div class="col-md-3">
+        <label asp-for="PessoaNome" class="control-label">Nome da Pessoa</label>
+        <input asp-for="PessoaNome" class="form-control">
+    </div>
+    <div class="col-md-3">
+        <label asp-for="NomeGasto" class="control-label">Nome do Gasto</label>
+        <input asp-for="NomeGasto" class="form-control">
+    </div>
+    <div class="col-md-3">
+        <label asp-for="PrecoGasto" class="control-label">Preço do Gasto <em></em> R$</label>
+        <input asp-for="PrecoGasto" class="form-control">
+    </div>
+    <br>
+    <input type="submit" value="Criar" class="btn btn-primary" />
+</form>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

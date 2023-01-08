@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using gestorDeGastosMVC.Context;
+using gestorDeGastosMVC.Models;
 
 namespace gestorDeGastosMVC.Controllers
 {
-    [Route("[controller]")]
-    public class Gasto : Controller
+    public class GastoController : Controller
     {
         private readonly GastosContext _banco;
 
-        public Gasto(GastosContext banco)
+        public GastoController(GastosContext banco)
         {
             _banco = banco;
         }
@@ -31,10 +31,15 @@ namespace gestorDeGastosMVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult Criar(Gasto gasto)
+        public IActionResult Criar(Gasto gastoCompleto)
         {
-            _banco.Add(gasto);
-            return View();
+            if (ModelState.IsValid)
+            {
+                _banco.Gastos.Add(gastoCompleto);
+                _banco.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(gastoCompleto);
         }
     }
 }

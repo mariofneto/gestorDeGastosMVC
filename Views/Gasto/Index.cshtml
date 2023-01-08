@@ -1,0 +1,36 @@
+@model IEnumerable<gestorDeGastosMVC.Models.Gasto>
+@{
+    ViewData["Title"] = "Todos os Gastos";
+}
+
+<h1>Todos os Registros de Gastos</h1>
+<a asp-action="Criar">Criar</a>
+<br><br>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.PessoaNome)</th>
+            <th>@Html.DisplayNameFor(model => model.NomeGasto)</th>
+            <th>@Html.DisplayNameFor(model => model.PrecoGasto)</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.PessoaNome)</td>
+                <td>@Html.DisplayFor(modelItem => item.NomeGasto)</td>
+                <td>@Html.DisplayFor(modelItem => item.PrecoGasto)</td>
+                <td>detalhes</td>
+                <td>editar</td>
+                <td>excluir</td>
+            </tr>
+        }
+    </tbody>
+</table>
