@@ -41,5 +41,38 @@ namespace gestorDeGastosMVC.Controllers
             }
             return View(gastoCompleto);
         }
+
+        public IActionResult Detalhes(int id)
+        {
+            if (id == null)
+                return NotFound();
+            var detalhesGasto = _banco.Gastos.Find(id);
+            if (detalhesGasto == null)
+                return NotFound();
+            return View(detalhesGasto);
+        }
+
+        public IActionResult Editar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Editar(int id, Gasto gasto)
+        {
+            if (ModelState.IsValid)
+            {
+                var buscarNoBanco = _banco.Gastos.Find(id);
+
+                buscarNoBanco.PessoaId = gasto.PessoaId;
+                buscarNoBanco.NomeGasto = gasto.NomeGasto;
+                buscarNoBanco.PrecoGasto = gasto.PrecoGasto;
+                _banco.Gastos.Update(buscarNoBanco);
+                _banco.SaveChanges();
+
+                return RedirectToAction(nameof(Index));
+            }
+            return View(Index);
+        }
     }
 }

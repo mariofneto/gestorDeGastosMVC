@@ -11,7 +11,7 @@
     <thead>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Id)</th>
-            <th>@Html.DisplayNameFor(model => model.PessoaNome)</th>
+            <th>@Html.DisplayNameFor(model => model.PessoaId)</th>
             <th>@Html.DisplayNameFor(model => model.NomeGasto)</th>
             <th>@Html.DisplayNameFor(model => model.PrecoGasto)</th>
             <th></th>
@@ -24,12 +24,12 @@
         {
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.Id)</td>
-                <td>@Html.DisplayFor(modelItem => item.PessoaNome)</td>
+                <td>@Html.DisplayFor(modelItem => item.PessoaId)</td>
                 <td>@Html.DisplayFor(modelItem => item.NomeGasto)</td>
                 <td>@Html.DisplayFor(modelItem => item.PrecoGasto)</td>
-                <td>detalhes</td>
-                <td>editar</td>
-                <td>excluir</td>
+                <td><a asp-action="Detalhes" asp-route-id="@item.Id">Detalhes</a></td>
+                <td><a asp-action="Editar" asp-route-id="@item.Id">Editar</a></td>
+                <td><a asp-action="Excluir" asp-route-id="@item.Id">Excluir</a></td>
             </tr>
         }
     </tbody>

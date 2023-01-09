@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9cQ3JpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/dev/gestorDeGastosMVC/Views/Gasto/Detalhes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9cRGV0YWxoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/gestorDeGastosMVC/Views/Gasto/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/dev/gestorDeGastosMVC/Views/Gasto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FzdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

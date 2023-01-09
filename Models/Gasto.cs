@@ -9,8 +9,9 @@ namespace gestorDeGastosMVC.Models
     public class Gasto
     {
         public int Id { get; set; }
-        public string PessoaNome { get; set; }
+        public int PessoaId { get; set; }
         public string NomeGasto { get; set; }
         public decimal PrecoGasto { get; set; }
+
     }
 }

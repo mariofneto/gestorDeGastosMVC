@@ -1,0 +1,13 @@
+@model gestorDeGastosMVC.Models.Gasto
+@{
+    ViewData["Title"] = "Detalhes";
+}
+<br>
+<div>
+    <p>@Html.DisplayNameFor(model => model.Id) : @Html.DisplayFor(model => model.Id)</p>
+    <p>@Html.DisplayNameFor(model => model.PessoaId) : @Html.DisplayFor(model => model.PessoaId)</p>
+    <p>@Html.DisplayNameFor(model => model.NomeGasto) : @Html.DisplayFor(model => model.NomeGasto)</p>
+    <p>@Html.DisplayNameFor(model => model.PrecoGasto) : @Html.DisplayFor(model => model.PrecoGasto)</p>
+</div>
+<br>
+<div><a asp-action="Index">Voltar</a></div>
