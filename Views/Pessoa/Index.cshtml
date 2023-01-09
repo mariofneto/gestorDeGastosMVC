@@ -3,5 +3,14 @@
     ViewData["Title"] = "Pessoa";
 }
 
-<h1>Crie seu Apelido apertando o botão abaixo<h1>
-<a asp-action="Criar" class="btn btn-primary">Criar Apelido</a>
+<h1>O que deseja fazer?</h1>
+<br>
+<label>Criar um apelido: </label>
+<a asp-action="Criar" class="btn btn-primary">Criar</a>
+<br><br>
+<label>Editar um apelido: </label>
+<a asp-action="Editar" class="btn btn-warning">Editar</a>
+<br><br>
+<label>Deletar um apelido: </label>
+<a asp-action="Deletar" class="btn btn-danger">Deletar</a>
+

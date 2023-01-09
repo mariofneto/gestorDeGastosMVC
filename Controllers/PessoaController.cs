@@ -35,14 +35,38 @@ namespace gestorDeGastosMVC.Controllers
         {
             var buscarNoBanco = _banco.Pessoas.FirstOrDefault(x => x.Nome == apelido.Nome);
 
-            if(buscarNoBanco != null)
+            if (buscarNoBanco != null)
             {
-                Console.WriteLine("Já existe esse apelido!");
                 return RedirectToAction(nameof(Index));
             }
             _banco.Pessoas.Add(apelido);
             _banco.SaveChanges();
+            return View(Index);
+        }
+
+        public IActionResult Editar()
+        {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Editar(Pessoa apelidoAntigo, Pessoa apelidoNovo)
+        {
+
+            if (ModelState.IsValid)
+            {
+                var buscarNoBanco = _banco.Pessoas.FirstOrDefault(x => x.Nome == apelidoAntigo.Nome);
+                buscarNoBanco.Nome = apelidoNovo.Nome;
+
+
+                _banco.Pessoas.Update(buscarNoBanco);
+                _banco.SaveChanges();
+
+                return RedirectToAction(nameof(Index));
+
+            }
+
+            return View(Index);
         }
     }
 }

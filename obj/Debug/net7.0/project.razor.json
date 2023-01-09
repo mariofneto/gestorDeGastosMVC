@@ -16570,6 +16570,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\dev\\gestorDeGastosMVC\\Views\\Pessoa\\Editar.cshtml",
+      "TargetPath": "Views\\Pessoa\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\dev\\gestorDeGastosMVC\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
