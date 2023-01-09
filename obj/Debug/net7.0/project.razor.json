@@ -16560,6 +16560,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\dev\\gestorDeGastosMVC\\Views\\Pessoa\\Index.cshtml",
+      "TargetPath": "Views\\Pessoa\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\dev\\gestorDeGastosMVC\\Views\\Gasto\\Editar.cshtml",
       "TargetPath": "Views\\Gasto\\Editar.cshtml",
       "FileKind": "mvc"
@@ -16602,6 +16607,11 @@
     {
       "FilePath": "c:\\dev\\gestorDeGastosMVC\\Views\\Gasto\\Index.cshtml",
       "TargetPath": "Views\\Gasto\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\dev\\gestorDeGastosMVC\\Views\\Pessoa\\Criar.cshtml",
+      "TargetPath": "Views\\Pessoa\\Criar.cshtml",
       "FileKind": "mvc"
     }
   ],

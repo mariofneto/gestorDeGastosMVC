@@ -13,5 +13,7 @@ namespace gestorDeGastosMVC.Models
         public string NomeGasto { get; set; }
         public decimal PrecoGasto { get; set; }
 
+        public Pessoa Pessoa { get; set; }
+
     }
 }

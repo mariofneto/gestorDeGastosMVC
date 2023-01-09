@@ -14,6 +14,7 @@ namespace gestorDeGastosMVC.Context
 
         }
         public DbSet<Gasto> Gastos { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
 
     }
 }
